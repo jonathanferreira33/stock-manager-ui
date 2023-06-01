@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,700;1,500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+:root {
+    --blue: #287bff;
+    --white: #fff;
+    --grey: #f5f5f5;
+    --black0: #353535;
+    --black1: #222;
+    --black2: #999;
+    --red: #b90000;
+    --orange0: #f06523;
+    --orange1: #f68c11;
+}
+
+header {
+    background-color: var(--black0);
+    padding: 10px;
+    color: var(--white);
+    text-align: center;
+}
+
+.title h2 {
+    padding-bottom: 20px;
+}
+
+main {
+    padding: 30px 50px;
+}
+
+.card {
+    background-color: var(--white);
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-top: 15px;
+    border-radius: 5px;
+    color: var(--black0);
+}
+
+.card label {
+    padding-bottom: 5px;
+}
+
+.lineInput {
+    display: grid;
+    margin-bottom: 10px;
+}
+
+.lineInput input[type=text], input[type=number] {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    outline: 0;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+}
+
+
+::-webkit-input-placeholder{
+    color: var(--orange0);
+  }
+
+button {
+    border: none;
+    padding: 10px;
+    background-color: var(--orange0);
+    color: #f5f5f5;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: all ease 0.3s;
+    cursor: pointer;
+    width: 100px;
+}
+
+button:hover {
+    background-color: var(--orange1);
+}
+
+.content {
+    margin-top: 15px;
+}
+
+table {
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+    width: 100%;
+    text-align: center;
+}
+
+table th {
+    background-color: var(--orange0);
+    padding: 5px;
+}
+
+table td {
+    padding: 10px 5px;
+}
+
+table ion-icon {
+    font-size: 1.3em;
+    padding: 0 5px ;
+    cursor: pointer;
+}
+
+table img {
+    width: 25px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+/* modal  */
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+    padding-top: 60px;
+  }
+  
+.modal h3 {
+    margin: 30px 0;
+}
+  .modal-internal {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; 
+    width: 400px; 
+    height: 300px;
+    display: flex;
+  }
+
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; 
+    width: 80%; 
+  }
+
+  .modal input[type=text],
+  .modal input[type=number] {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    outline: 0;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+}
+  
+
+  .close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  
+
+  .close:hover,
+  .close:focus {
+    color: var(--orange1);
+    cursor: pointer;
+  }
+  
+  /* Add Zoom Animation */
+  .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+  }
+  
+  @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+  }
+  
+  @keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+  }

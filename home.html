@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Manager</title>
+    <link rel="stylesheet" href="assets/home.css">
+    <script src="scripts/script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" defer></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js" defer></script> 
+</head>
+    <body>
+        <header>
+            <h1>Gerenciador de Estoque</h1>
+        </header>
+
+        <main>
+            <div class="title">
+                <h2>Controle de produto</h2>
+                <span>Lista de Produtos:</span>
+            </div>
+            <div class="card">
+                <div class="lineInput">
+                    <label for="">Produto</label>
+                    <input type="text" id="product" placeholder="Nome do produto">
+                </div>
+
+                <div class="lineInput">
+                    <label for="">Quantidade</label>
+                    <input type="number" id="product-amount" placeholder="Quantidade">
+                </div>
+                <button onclick="product.add()">Adicionar</button>
+                <button onclick="product.clear()">Limpar</button>
+                <!-- <button onclick="product.delete()">Remover</button> -->
+                
+            </div>
+
+            <div class="content">
+                <table id="allProductsDB">
+                    <thead>
+                        <th>Id</th>
+                        <th>Produto</th>
+                        <th>Quantidade</th>
+                        <th>Ação</th>                    
+                    </thead>
+                    <tbody id="tbody">
+                        
+                    </tbody>
+                </table>
+            </div>
+        </main>
+       <div id="id01" class="modal">
+        <div class="modal-internal">
+
+            <form class="modal-content animate" method="PATCH">
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                </div>
+                <h3>Atualizar produto: </h3>
+                <div id="id02" class="container" >
+                </div>
+            </form>
+        </div>
+        </div>
+    </body>
+</html>
