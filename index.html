@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" defer></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js" defer></script> 
+    <title>Stock Manager</title>
+</head>
+<body>
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="http://">
+                        <span class="icon"><ion-icon name="file-tray-outline"></ion-icon></span>
+                        <span class="title">Stock Manager</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://">
+                        <span class="icon"><ion-icon name="cube-outline"></ion-icon></span>
+                        <span class="title">Estoque</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://">
+                        <span class="icon"><ion-icon name="people-outline"></ion-icon></span>
+                        <span class="title">Usuario</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://">
+                        <span class="icon"><ion-icon name="book-outline"></ion-icon></span>
+                        <span class="title">Ajuda</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://">
+                        <span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
+                        <span class="title">Configurações</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://">
+                        <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
+                        <span class="title">Sair</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+                <div class="search">
+                    <label for="">
+                        <input type="text" placeholder="Pesquisar">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </label>
+                </div>
+                <div class="user">
+                    <img src="assets/img/user.jpg" alt="" srcset="">
+                </div>
+            </div>
+            <!-- cards -->
+            <section class="container-card row">
+                <div class="cardBox">
+                    <div class="card">
+                        <div>
+                            <div class="number">1,504</div>
+                            <div class="cardName">Produtos</div>
+                        </div>
+                        <div class="iconBx">
+                            <ion-icon name="cube-outline"></ion-icon>
+                        </div>
+                    </div>
+                </div>
+                <div class="cardBox">
+                    <div class="card">
+                        <div>
+                            <div class="number">1,504</div>
+                            <div class="cardName">Estoque</div>
+                        </div>
+                        <div class="iconBx">
+                            <ion-icon name="albums-outline"></ion-icon>
+                        </div>
+                    </div>
+                </div>
+                <div class="cardBox">
+                    <div class="card">
+                        <div>
+                            <div class="number">1,504</div>
+                            <div class="cardName">Daily Views</div>
+                        </div>
+                        <div class="iconBx">
+                            <ion-icon name="pencil-outline"></ion-icon>
+                        </div>
+                    </div>
+                </div>
+                <div class="cardBox">
+                    <div class="card">
+                        <div>
+                            <div class="number">1,504</div>
+                            <div class="cardName">Daily Views</div>
+                        </div>
+                        <div class="iconBx">
+                            <ion-icon name="pencil-outline"></ion-icon>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- details list -->
+            <div class="details">
+                <div class="recentOrders">
+                    <div class="cardHeader">
+                        <h2>Recentes</h2>
+                        <a href="http://" target="_blank" rel="noopener noreferrer" class="btn">View All</a>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>Produto</td>
+                                <td>Quantidade</td>
+                                <td>Editar</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Coca Cola</td>
+                                <td>100</td>
+                                <td><ion-icon name="add-outline"></ion-icon></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+    <script>
+
+        // Menu
+        let toggle = document.querySelector('.toggle');
+        let navigation = document.querySelector('.navigation');
+        let main = document.querySelector('.main');
+
+        toggle.onclick = function(){
+            navigation.classList.toggle('active');
+            main.classList.toggle('active');
+        }
+
+        //
+
+        let list = document.querySelectorAll('.navigation li');
+        function activeLink(){
+            list.forEach((item) =>
+            item.classList.remove('hovered'));
+            this.classList.add('hovered');
+            console.log(item);
+        }
+
+        list.forEach((item) =>
+        item.addEventListener('mouseover', activeLink));
+
+    </script>
+</html>

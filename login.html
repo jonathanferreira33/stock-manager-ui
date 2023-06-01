@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/login.css">
+    <title>Login Stock Manager</title>
+</head>
+<body>
+    <div class="container-ex">
+        <div class="form">          
+            <div class="container">
+              <label for="uname"><b>Usuário</b></label>
+              <input type="text" id="username" required>
+              <label for="psw"><b>Senha</b></label>
+              <input type="password" id="psw" required>
+              <form action="home.html">
+                  <button type="submit" >Login</button>
+              </form>
+              <button onclick="postAuthentication()">Cadastrar</button>
+            </div>
+          </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.2/jquery.min.js" integrity="sha512-tWHlutFnuG0C6nQRlpvrEhE4QpkG1nn2MOUMWmUeRePl4e3Aki0VB6W1v3oLjFtd0hVOtRQ9PHpSfN6u6/QXkQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+      
+      function postAuthentication() {
+      var pass = document.getElementById('psw').value;
+      var user = document.getElementById('username').value;
+
+    
+      const body = {
+        username: user,
+        password: pass
+      };
+
+      $.post("http://127.0.0.1:8000/users/", body, (data, status) => {
+          alert("Usuário Cadastrado com sucesso! Realize o Login")      
+      });
+      }
+    </script>
+</body>
+</html>
